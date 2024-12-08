@@ -31,3 +31,13 @@ services:
       - model
     volumes:
       - ./logs/:/usr/src/app/logs/
+  plot:
+    build: 
+      context: ./plot
+    depends_on:
+      - rabbitmq
+      - features
+      - model
+      - metric
+    volumes:
+      - ./logs/:/usr/src/app/logs/

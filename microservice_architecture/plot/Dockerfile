@@ -3,5 +3,4 @@ WORKDIR /usr/src/app
 COPY ./src/ ./
 COPY ./requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-# RUN pip install --upgrade scikit-learn
-CMD [ "python", "./model.py" ]
+CMD [ "python", "./plot.py" ]
